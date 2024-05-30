@@ -40,7 +40,7 @@
           <span>!</span>
         </div>
         <div class="create-conf">
-          <button >CREATE CONFERENCE NOW</button>
+          <button >CREATE NEW CONFERENCE NOW</button>
         </div>
       </div>
 
@@ -231,12 +231,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function showCard() {
+        cardContainer.style.display = 'block';
         cardContainer.classList.add("fade-in");
-        setTimeout(() => {
-            cardContainer.classList.remove("fade-in");
-        }, 500);
     }
 });
+
 
 </script>
 
