@@ -1,0 +1,482 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+--text: #000000;
+--light: #f2f2f2;
+--main: #5c376d;
+--second: #cda3dc;
+--accent: #8e209f;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  cursor: url(/img/custom_cursor.png), pointer;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  background: rgb(92,55,109);
+  background: linear-gradient(132deg, rgba(92,55,109,1) 29%, rgba(255,255,255,1) 29%);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.45);
+}
+.company-name{
+  color: white !important;
+}
+nav .head {
+  display: flex;
+  align-items: center;
+}
+
+
+/* #nav .logo img {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#nav .heading {
+  margin: 0;
+  font-size: 30px;
+}
+
+#nav .nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 400px;
+}
+
+#nav .nav-links li {
+  font-weight: bold;
+  margin-left: auto;
+}
+
+#nav .nav-links a {
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+  transition: all 0.3s ease;
+
+}
+
+#nav .nav-links a:hover {
+  color: #2340ff;
+}
+
+#nav .nav-links a:focus {
+  color: #2340ff;
+}
+
+#nav .profile-img {
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+} */
+
+
+
+/* HOME */
+.home{
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: flex-start; */
+  flex-direction: column;
+  height: auto;
+  overflow: hidden;
+  background: url(/img/) no-repeat center center/cover;
+}
+.sub-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+height: max-content;
+}
+
+/* .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-box {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+.search-button {
+  padding: 10px 20px;
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: #78255d;
+} */
+
+.greeting-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 4em;
+  text-align: center;
+  transform: scale(0.01);
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+.text-animation span {
+  font-size: 2em;
+  color: #444;
+  font-weight: 700;
+}
+
+.highlighted-text {
+  background: linear-gradient(90deg, var(--accent), #ffffff);
+  background-size: 300% auto;
+  color: #ffffff;
+  font-size: 30px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 2s ease-in-out alternate;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 200%;
+  }
+
+  100% {
+    background-position: 0%;
+  }
+}
+.create-conf {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.create-conf button {
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(120deg, #9b59b6, #8e44ad, #c471e5);
+  background-size: 200% auto;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  animation: shine 3s linear infinite;
+}
+.create-conf button:hover {
+  transform: translateY(-3px);
+}
+
+
+@keyframes shine {
+  0% {
+      background-position: 200% center;
+  }
+  100% {
+      background-position: -200% center;
+  }
+}
+
+
+/* SUB HOME */
+.sub-home{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 60%;
+  overflow: hidden;
+  margin: 1em 5em 5em 5em;
+  padding: 3em;
+  border-radius: 2em;
+background: #ffffff;
+box-shadow:  11px 11px 22px #bababa,
+             -11px -11px 22px #ffffff;
+  background: linear-gradient(71deg, rgba(255,255,255,1) 70%, rgba(92,55,109,1) 70%);
+  border: 1px solid var(--main);
+}
+
+.sub-home h1{
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--main);
+  margin-bottom: 1em;
+}
+.sub-home p{
+  font-size: 1.2em;
+  color: gray;
+  margin-bottom: 1em;
+}
+
+.event-error{
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0;
+  p{
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  a{
+    font-size: 1.2em;
+    color: var(--accent);
+    text-decoration: none;
+  }
+}
+
+
+.myevent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow: visible;
+  margin-top: 2em;
+}
+
+.myeventcard {
+  width: 40%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid var(--main);
+}
+.myeventcard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.myeventcard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.myeventcard-content {
+  padding: 15px;
+}
+.myeventcard-title {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+}
+.myeventcard-address {
+  font-size: 1em;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+.myeventcard-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.myeventcard-button:hover {
+  transform: translateY(-3px);
+}
+
+
+
+
+/* MORE EVENTS */
+.more-events{
+  padding: 2em;
+}
+.event-nav {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 2em 0;
+}
+
+.nav-button button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(210, 210, 210);
+  color: #333;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button button.active {
+  background-color: #9b59b6;
+  color: white;
+}
+
+.nav-button button:not(.active):hover {
+  background-color: #ddd;
+}
+
+
+.card-container {
+  display: none;
+  margin-top: 20px;
+}
+
+.card-container.fade-in {
+  display: block;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.otherevent {
+  width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.otherevent img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.otherevent-content {
+  padding: 15px;
+}
+
+.otherevent-title {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+}
+
+.otherevent-address {
+  font-size: 1em;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+.otherevent-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9b59b6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(155, 89, 182, 0.3);
+}
+
+.otherevent-button:hover {
+  background-color: #8e44ad;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(155, 89, 182, 0.3);
+}
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+/* Add your existing styles here */
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media screen and (max-width: 480px) { /* Mobile */
+  .button-slider {
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .slide-button {
+      font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .search-container {
+    width: 100%;
+    /* Ensure the search container takes full width */
+    justify-content: center;
+    /* Center the input and button */
+  }
+
+  .search-input {
+    width: 100%;
+    /* Set input width to full width */
+    margin-right: 10px;
+    /* Add some margin between input and button */
+  }
+
+  .search-button {
+    margin-right: 10px;
+    /* Adjust button padding */
+  }
+
+  .button-slider {
+    width: 100%;
+    max-width: 600px;
+}
+}

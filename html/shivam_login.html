@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/shivam_login.css" />
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/bg.css" />
+    <link rel="stylesheet" href="/css/loader.css">
+    <script src="/script/shivam.js" async></script>
+    <title>Sign-In | Moox CMT</title>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="navbar" id="nav">
+      <a class="company-name" href="/html/user_home.html">MOOX</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#news">NEWS</a>
+      </div>
+    </div>
+    <div class="copyright">&copy; All Rights Reserved | Moox Cmt</div>
+
+    <div class="flip-card">
+<div class="flip-card-inner">
+    <div class="login-wrapper flip-card-front" id="login">
+      <div class="text">
+        Log in to Step into your research paper world !
+      </div>
+      <div class="main">
+        <div class="login-container">
+          <div class="header">
+            <h1>Log In</h1>
+          </div>
+          <div class="login-option">
+            <div class="option-container">
+              <button id="host-login" class="button-active">HOST</button>
+              <button id="inv-login">INVIGILATOR</button>
+              <button id="user-login">USER</button>
+            </div>
+          </div>
+          <div class="login-body">
+            <form action="/html/user_home.html" method="POST">
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email / ID"
+                />
+                <span class="email-icon">
+                  <i class="fas fa-envelope"></i>
+                </span>
+              </div>
+              <div class="input-group">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Password"
+                />
+                <span class="eye-icon" onclick="tPVL()">
+                  <i class="fas fa-eye"></i>
+                </span>
+              </div>
+              <button type="submit">Log In</button>
+            </form>
+          </div>
+          <div class="main-footer">
+            <p>Forgot password ? <span id="forgotPass">Click Here</span></p>
+            <p>
+              Don't have an account?
+              <span id="loginTosignup" onclick="toSignup()">Sign Up</span>
+            </p>
+          </div>
+        </div>
+        <div class="login-img">
+          <img src="/img/login.jpg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="signup-wrapper flip-card-back" id="signup">
+      <div class="text">
+        New Here ? Sign up and join the community of top tier researchers !
+      </div>
+      <div class="main">
+        <div class="signup-img">
+          <img src="/img/singup.jpg" alt="" />
+        </div>
+          <div class="signup-container">
+            <div class="header">
+              <h1>Sign Up</h1>
+            </div>
+            <div class="signup-body">
+              <form action="/html/user_home.html" method="POST">
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    placeholder="Name"
+                  />
+                  <span class="name-icon">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="email"
+                    id="signup-email"
+                    name="email"
+                    required
+                    placeholder="Email"
+                  />
+                  <span class="email-icon">
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="number"
+                    id="number"
+                    name="number"
+                    required
+                    placeholder="Phone"
+                    oninput="validateMobile(this)"
+                  />
+                  <span class="email-icon">
+                    <i class="fas fa-mobile"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="address"
+                    name="address"
+                    required
+                    placeholder="Address"
+                  />
+                  <span class="email-icon">
+                    <i class="fas fa-home"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    required
+                    placeholder="Country"
+                  />
+                  <span class="email-icon">
+                    <i class="fas fa-flag"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="password"
+                    id="signup-password"
+                    name="password"
+                    required
+                    placeholder="Password"
+                  />
+                  <span class="eye-icon-s" onclick="tPVS()">
+                    <i class="fas fa-eye" id="eye-s"></i>
+                  </span>
+                </div>
+                <div class="input-group">
+                  <input
+                    type="password"
+                    id="re-password"
+                    name="re-password"
+                    required
+                    placeholder="Confirm Password"
+                  />
+                  <span class="eye-icon-r" onclick="tPVR()">
+                    <i class="fas fa-eye" id="eye-r"></i>
+                  </span>
+                </div>
+                <button type="submit">Sign Up</button>
+              </form>
+            </div>
+            <div class="main-footer">
+              <p>
+                Already have an account ? 
+                <span id="signupTologin" onclick="toLogin()">Log in</span>
+              </p>
+            </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="loader" id="loader">
+      <div id="spinner-box">
+        <svg viewBox="0 0 100 100">
+          <defs>
+            <filter id="shadow">
+              <feDropShadow dx="0" dy="0" stdDeviation="1.5" 
+                flood-color="#5c376d"/>
+            </filter>
+          </defs>
+          <circle id="spinner" style="fill:transparent;stroke:#5c376d;stroke-width: 7px;stroke-linecap: round;filter:url(#shadow);" cx="50" cy="50" r="45"/>
+      </svg>
+      </div>
+  </div>
+  </body>
+</html>

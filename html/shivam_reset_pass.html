@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UFT-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password | MOOX</title>
+    <link rel="stylesheet" href="/css/shivam_reset.css" />
+    <link rel="stylesheet" href="/css/bg.css" />
+
+    <script type="text/javascript" async>
+    function validatePasswords() {
+      var passwordField = document.getElementById("signup-password");
+      var repasswordField = document.getElementById("signup-repassword");
+      var msg = document.getElementById("msg");
+
+      // Regular expressions for password validation
+      var minLengthRegex = /.{8,}/; // Minimum 8 characters
+      var uppercaseRegex = /[A-Z]/; // At least one uppercase letter
+      var lowercaseRegex = /[a-z]/; // At least one lowercase letter
+      var digitRegex = /[0-9]/;     // At least one digit
+
+      var password = passwordField.value;
+      var repassword = repasswordField.value;
+
+      if (!minLengthRegex.test(password)) {
+        msg.innerText = "Password must be at least 8 characters long";
+        msg.className = "msg";
+        msg.style.display = "block";
+        return false;
+      } else if (!uppercaseRegex.test(password)) {
+        msg.innerText = "Password must contain at least one uppercase letter";
+        msg.className = "msg";
+        msg.style.display = "block";
+        return false;
+      } else if (!lowercaseRegex.test(password)) {
+        msg.innerText = "Password must contain at least one lowercase letter";
+        msg.className = "msg";
+        msg.style.display = "block";
+        return false;
+      } else if (!digitRegex.test(password)) {
+        msg.innerText = "Password must contain at least one digit";
+        msg.className = "msg";
+        msg.style.display = "block";
+        return false;
+      } else if (password !== repassword) {
+        msg.innerText = "Passwords do not match";
+        msg.className = "msg";
+        msg.style.display = "block";
+        return false;
+      } else {
+        msg.innerText = "Passwords meet the criteria";
+        msg.className = "msg success";
+        msg.style.display = "block";
+        return true;
+      }
+    }
+
+    function hideErrorMessage() {
+      document.getElementById("msg").style.display = "none";
+    }
+    </script>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="navbar" id="nav">
+      <a class="company-name" href="/html/user_home.html">MOOX</a>
+    </div>
+    <div class="copyright">&copy; All Rights Reserved | Moox Cmt</div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="content">
+          <div class="formBox">
+            <h2>RESET PASSWORD</h2>
+            <form method="post" onsubmit="return validatePasswords()">
+                <input type="password" id="signup-password" placeholder="Password" oninput="hideErrorMessage()" />
+                <input type="password" id="signup-repassword" placeholder="Confirm Password" oninput="hideErrorMessage()" />
+                <div class="msg" id="msg" style="display: none"></div>
+                <button type="submit" id="resetBtn">Reset Password</button>
+                <p><a href="/html/shivam_login.html">Back To Login</a></p>
+              </form>
+          </div>
+        </div>
+        <div class="imgBox">
+          <img src="/img/reset.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

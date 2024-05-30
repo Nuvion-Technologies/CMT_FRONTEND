@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UFT-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password | MOOX</title>
+
+    <link rel="stylesheet" href="/css/shivam_forgot.css" />
+    <link rel="stylesheet" href="/css/bg.css" />
+    <script type="text/javascript" async>
+      function validateForm() {
+        event.preventDefault();
+        // Get the email input value
+        var email = document.getElementById("signup-password").value;
+        var fogotimg = document.getElementById("fogotimg");
+
+        // Email validation regex
+        var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        // Check if the email is valid
+        if (email.match(emailRegex)) {
+          var popup = document.getElementById("popup");
+          popup.classList.add("showPopup");
+
+          // Hide the popup after 3 seconds (3000 milliseconds)
+          setTimeout(function () {
+            popup.classList.remove("showPopup");
+          }, 2500);
+          return true;
+
+          // Proceed with form submission
+        } else {
+          // If email is not valid, trigger animation on fogotimg
+          fogotimg.classList.add("animateImg");
+          setTimeout(function () {
+            fogotimg.classList.remove("animateImg");
+          }, 1000); // Remove animation class after 1 second
+          return false; // Prevent form submission
+        }
+      }
+    </script>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bg">
+      <div class="wave"></div>
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+    <div class="popup">
+      <div class="popup-content" id="popup">
+        <div class="popup-text">
+          <h2>Reset Link Sent</h2>
+          <p>
+            We have sent a password reset link to your email address. Please
+            check your inbox.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="navbar" id="nav">
+      <a class="company-name" href="/html/user_home.html">MOOX</a>
+    </div>
+    <div class="copyright">&copy; All Rights Reserved | Moox Cmt</div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="content">
+          <div class="formBox">
+            <h1>Forgot Password</h1>
+            <form onsubmit="return validateForm()">
+              <input
+                type="text"
+                id="signup-password"
+                placeholder="Enter Your Mail ID"
+              />
+              <button type="submit" name="">SEND RESET LINK</button>
+              <p><a href="/html/shivam_login.html">Back To Login</a></p>
+            </form>
+          </div>
+        </div>
+        <div class="imgBox">
+          <img id="fogotimg" src="/img/forgot.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

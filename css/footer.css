@@ -1,0 +1,220 @@
+footer {
+    /* background-color: #ededed; */
+    background: url(/img/Fluid-100s-3000px.svg) no-repeat;
+  background-position: 100% 100%;
+    text-align: center;
+  
+    /* margin-top: 100px; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer-box{
+    padding: 10px 10px 0px 10px ;
+    width: 100%;
+    height: 100%;
+  }
+  footer .mainbox1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .mainbox1 .box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25%;
+    gap: 10px;
+    margin-left: 40px;
+  }
+  .mainbox1 .box:nth-child(1){
+    width: 30%;
+  }
+  .mainbox1 .box:nth-child(2){
+    width: 20%;
+  }
+  .mainbox1 .box:nth-child(3){
+    width: 20%;
+  }
+  .mainbox1 .box:nth-child(4){
+    width: 30%;
+  }
+  .box .head{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .box .f-desc{
+    font-size: 15px;
+    color: #333;
+    text-align: justify;
+    /* width: 70%; */
+  }
+  .box .links{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 50px;
+  }
+  .links a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  .links a:hover{
+    color: var(--accent);
+  }
+  .box .address{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .address p i{
+    margin-right: 5px;
+    width: 15px;
+  }
+  
+  .box .n-desc{
+    font-size: 15px;
+    color: #333;
+    text-align: justify;
+    width: 70%;
+  }
+  .box .sub{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .sub input{
+    border: none;
+    outline: none;
+    padding: 5px 0px 5px 5px;
+    width: 200px;
+    border-radius: 5px;
+  }
+  .sub button{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .sub button:hover{
+    filter: brightness(120%);
+  }
+  
+  footer .mainbox2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 50px;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .mainbox2 .head{
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .mainbox2 .social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .social a{
+    text-decoration: none;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    color: #7a4a91;
+  }
+  .social a:hover{
+    color: var(--accent);
+  }
+  
+  .madeby{
+    margin-top: 50px;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+  }
+  .madeby .copyright{
+    color: #333;
+    font-weight: 700;
+    margin: 20px auto;
+    font-size: 20px;
+  }
+  .madeby .end{
+    background-color: #333;
+    padding: 5px 0px 0px 0px;
+  }
+  .end .nt{
+    color: white;
+  }
+  .end a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+  }
+  .privacypolicy a{
+    color: white;
+    font-size: 10px;
+    margin: 5px 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .form-box .text{
+        font-size: 30px;
+      }
+      .form-box form{
+        padding: 10px 0 0 0;
+      }
+      .form-box form .form-row{
+        display: block;
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+      form .form-row .input-data{
+        margin: 35px 0!important;
+      }
+      .submit-btn .input-data{
+        width: 40%!important;
+      }
+      footer .mainbox1{
+        flex-direction: column !important;
+      }
+      footer .box{
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-top: 20px !important;
+      }
+      footer .head{
+        padding-left: 20px !important;
+      }
+      .f-desc,.address,.n-desc,.links,.sub{
+        width: 90% !important;
+        padding-left: 20px !important;
+      }
+  }
