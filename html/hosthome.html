@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOOX CMT | Host</title>
+    <link rel="stylesheet" href="/css/hosthome.css" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="navbar" id="nav">
+      <a class="company-name" href="/html/user_home.html">MOOX</a>
+      <div class="nav-links" id="navLinks">
+        <a class="n-link" href="#">HOME</a>
+        <a class="n-link" href="#about">ABOUT</a>
+        <a class="n-link" href="#contact">CONTACT</a>
+        <a class="n-link" href="#news">NEWS</a>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MOOX CMT | Host</title>
-  <link rel="stylesheet" href="/css/hosthome.css">
-  <link rel="stylesheet" href="/css/navbar.css">
-  <link rel="stylesheet" href="/css/footer.css">
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <style>
+        <!-- LOGIN BUTTON -->
+        <!-- BELOW ACCOUNT CODE IS FOR WHEN THE USER LOGIN AND AFTER SHOW THIS LOGO WITH USER IMAGE -->
 
-  </style>
-</head>
-<body>
-  <div class="navbar" id="nav">
-    <a class="company-name" href="/html/user_home.html">MOOX</a>
-    <div class="nav-links" id="navLinks">
-      <a href="#">HOME</a>
-      <a href="#about">ABOUT</a>
-      <a href="#contact">CONTACT</a>
-      <a href="#news">NEWS</a>
-
-      <!-- LOGIN BUTTON -->
-      <!-- BELOW ACCOUNT CODE IS FOR WHEN THE USER LOGIN AND AFTER SHOW THIS LOGO WITH USER IMAGE -->
-<!--         
         <div class="account">
-        <a href="#"><img src="/img/account.png" alt=""></a>
-      </div>  -->
+          <a href="#"><img src="/img/account.png" alt="Account" /></a>
+          <div class="dropdown">
+            <a href="#" class="logout">Logout</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
     <div class="home">
       <div class="greeting-container" id="greet">
@@ -40,7 +43,7 @@
           <span>!</span>
         </div>
         <div class="create-conf">
-          <button >CREATE NEW CONFERENCE NOW</button>
+          <button>CREATE NEW CONFERENCE NOW</button>
         </div>
       </div>
 
@@ -54,46 +57,55 @@
           </div> -->
           <div class="myevent">
             <div class="myeventcard">
-              <img src="/img/conf.jpeg" alt="Card Image">
+              <img src="/img/conf.jpeg" alt="Card Image" />
               <div class="myeventcard-content">
                 <h2 class="myeventcard-title">India Tech Summit</h2>
-                <p class="myeventcard-address">International Exhibition Centre, Bengaluru, Karnataka</p>
+                <p class="myeventcard-address">
+                  International Exhibition Centre, Bengaluru, Karnataka
+                </p>
                 <a href="#" class="myeventcard-button">View</a>
               </div>
             </div>
 
             <div class="myeventcard">
-              <img src="/img/conf1.jpg" alt="Card Image">
+              <img src="/img/conf1.jpg" alt="Card Image" />
               <div class="myeventcard-content">
-                <h2 class="myeventcard-title">AI & Machine Learning Conference</h2>
+                <h2 class="myeventcard-title">
+                  AI & Machine Learning Conference
+                </h2>
                 <p class="myeventcard-address">Taj Palace, New Delhi, Delhi</p>
                 <a href="#" class="myeventcard-button">View</a>
               </div>
             </div>
 
             <div class="myeventcard">
-              <img src="/img/conf2.jpg" alt="Card Image">
+              <img src="/img/conf2.jpg" alt="Card Image" />
               <div class="myeventcard-content">
                 <h2 class="myeventcard-title">Digital India Summit</h2>
-                <p class="myeventcard-address">Mumbai Convention Center, Mumbai, Maharashtra</p>
+                <p class="myeventcard-address">
+                  Mumbai Convention Center, Mumbai, Maharashtra
+                </p>
                 <a href="#" class="myeventcard-button">View</a>
               </div>
             </div>
 
             <div class="myeventcard">
-              <img src="/img/conf3.jpg" alt="Card Image">
+              <img src="/img/conf3.jpg" alt="Card Image" />
               <div class="myeventcard-content">
-                <h2 class="myeventcard-title">Blockchain Technology Conference</h2>
-                <p class="myeventcard-address">Hyatt Regency, Chennai, Tamil Nadu</p>
+                <h2 class="myeventcard-title">
+                  Blockchain Technology Conference
+                </h2>
+                <p class="myeventcard-address">
+                  Hyatt Regency, Chennai, Tamil Nadu
+                </p>
                 <a href="#" class="myeventcard-button">View</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
     </div>
-    </div>
+
     <!-- <div class="div2">
       <div class="search-container">
         <input type="text" class="search-box" placeholder="Search...">
@@ -103,140 +115,191 @@
 
     <div class="more-events">
       <div class="expolore">
-        <h1>
-          Explore More
-        </h1>
+        <h1>Explore More</h1>
       </div>
       <div class="event-nav">
         <div class="nav-button">
-            <button id="ongoingBtn" class="active">Ongoing Events</button>
-            <button id="pastBtn">Past Events</button>
+          <button id="ongoingBtn" class="active">Ongoing Events</button>
+          <button id="pastBtn">Past Events</button>
         </div>
-    </div>
-    <div id="cardContainer" class="card-container">
-      <div class="otherevent">
-          <img src="/img/conf.jpeg" alt="Card Image">
+      </div>
+      <div id="ongoingCardContainer" class="card-container">
+        <div class="otherevent">
+          <img src="/img/conf.jpeg" alt="Card Image" />
           <div class="otherevent-content">
-              <h2 class="otherevent-title">India Tech Summit</h2>
-              <p class="otherevent-address">International Exhibition Centre, Bengaluru, Karnataka</p>
-              <a href="#" class="otherevent-button">View</a>
+            <h2 class="otherevent-title">India Tech Summit</h2>
+            <p class="otherevent-address">
+              International Exhibition Centre, Bengaluru, Karnataka
+            </p>
+            <a href="#" class="otherevent-button">View</a>
           </div>
-      </div>
-  </div>
-    </div>
-
-
-
-
-
-
-
-  <footer>
-    <div class="mainbox1">
-      <div class="box">
-        <div class="head">MOOX</div>
-        <div class="f-desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
-          consequuntur modi eos mollitia a autem dolorem perferendis fuga
-          ipsa voluptas rerum nemo delectus need to add more text here.
+        </div>
+        <div class="otherevent">
+          <img src="/img/conf.jpeg" alt="Card Image" />
+          <div class="otherevent-content">
+            <h2 class="otherevent-title">India Tech Summit</h2>
+            <p class="otherevent-address">
+              International Exhibition Centre, Bengaluru, Karnataka
+            </p>
+            <a href="#" class="otherevent-button">View</a>
+          </div>
+        </div>
+        <div class="otherevent">
+          <img src="/img/conf.jpeg" alt="Card Image" />
+          <div class="otherevent-content">
+            <h2 class="otherevent-title">India Tech Summit</h2>
+            <p class="otherevent-address">
+              International Exhibition Centre, Bengaluru, Karnataka
+            </p>
+            <a href="#" class="otherevent-button">View</a>
+          </div>
+        </div>
+        <div class="otherevent">
+          <img src="/img/conf.jpeg" alt="Card Image" />
+          <div class="otherevent-content">
+            <h2 class="otherevent-title">India Tech Summit</h2>
+            <p class="otherevent-address">
+              International Exhibition Centre, Bengaluru, Karnataka
+            </p>
+            <a href="#" class="otherevent-button">View</a>
+          </div>
+        </div>
+        <div class="otherevent">
+          <img src="/img/conf.jpeg" alt="Card Image" />
+          <div class="otherevent-content">
+            <h2 class="otherevent-title">India Tech Summit</h2>
+            <p class="otherevent-address">
+              International Exhibition Centre, Bengaluru, Karnataka
+            </p>
+            <a href="#" class="otherevent-button">View</a>
+          </div>
         </div>
       </div>
-      <div class="box">
-        <h3 class="head">Quick Links</h3>
-        <div class="links">
-          <a href="#">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-      <div class="box">
-        <div class="head">Reach Us</div>
-        <div class="address">
-          <p>
-            <i class="fas fa-map-marker-alt"></i>123, XYZ Street, ABC City
-          </p>
-          <p><i class="fas fa-envelope"></i>cmt@moox.co.in</p>
-          <p><i class="fas fa-phone-alt"></i>+91 1234567890</p>
-        </div>
-      </div>
-      <div class="box">
-        <div class="head">Newsletter</div>
-        <div class="n-desc">
-          Subscribe to our newsletter to keep yourself up to date.
-        </div>
-        <div class="sub">
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Your Email"
-          />
-          <button>Subscribe</button>
-        </div>
-      </div>
-    </div>
-    <div class="mainbox2">
-      <div class="head">Follow Us</div>
-      <div class="social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-    </div>
-    <div class="madeby">
-      <div class="copyright">&copy; All Rights Reserved | Moox Cmt</div>
-      <div class="end">
-        <div class="nt">Created by <a href="https://nuviontech.com" target="_blank">Nuvion Technologies</a></div>
-        <div class="privacypolicy">
-          <a href="#pp">Privacy Policy</a>
-          <a href="#pp">Terms and Conditions</a>
+
+      <div id="pastCardContainer" class="card-container">
+        <div class="otherevent">
+          <img src="/img/conf2.jpg" alt="Card Image" />
+          <div class="otherevent-content">
+            <h2 class="otherevent-title">Past Tech Summit</h2>
+            <p class="otherevent-address">
+              Convention Centre, New Delhi, Delhi
+            </p>
+            <a href="#" class="otherevent-button">View</a>
+          </div>
         </div>
       </div>
     </div>
-</footer>
 
+    <footer>
+      <div class="mainbox1">
+        <div class="box">
+          <div class="head">MOOX</div>
+          <div class="f-desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
+            consequuntur modi eos mollitia a autem dolorem perferendis fuga ipsa
+            voluptas rerum nemo delectus need to add more text here.
+          </div>
+        </div>
+        <div class="box">
+          <h3 class="head">Quick Links</h3>
+          <div class="links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="head">Reach Us</div>
+          <div class="address">
+            <p>
+              <i class="fas fa-map-marker-alt"></i>123, XYZ Street, ABC City
+            </p>
+            <p><i class="fas fa-envelope"></i>cmt@moox.co.in</p>
+            <p><i class="fas fa-phone-alt"></i>+91 1234567890</p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="head">Newsletter</div>
+          <div class="n-desc">
+            Subscribe to our newsletter to keep yourself up to date.
+          </div>
+          <div class="sub">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email"
+            />
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="mainbox2">
+        <div class="head">Follow Us</div>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="madeby">
+        <div class="copyright">&copy; All Rights Reserved | Moox Cmt</div>
+        <div class="end">
+          <div class="nt">
+            Created by
+            <a href="https://nuviontech.com" target="_blank"
+              >Nuvion Technologies</a
+            >
+          </div>
+          <div class="privacypolicy">
+            <a href="#pp">Privacy Policy</a>
+            <a href="#pp">Terms and Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const greet = document.getElementById("greet");
+      setTimeout(() => {
+        greet.style.transform = "scale(1)";
+      }, 300);
+    });
 
-</body>
-<script>
+    //EVENTs Managment
+    document.addEventListener("DOMContentLoaded", function () {
+      const ongoingBtn = document.getElementById("ongoingBtn");
+      const pastBtn = document.getElementById("pastBtn");
+      const ongoingCardContainer = document.getElementById(
+        "ongoingCardContainer"
+      );
+      const pastCardContainer = document.getElementById("pastCardContainer");
 
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const greet = document.getElementById('greet');
-  setTimeout(() => {
-    greet.style.transform = 'scale(1)';
-  }, 300);
-})
-
-
-
-
-  //EVENTs Managment
-  document.addEventListener("DOMContentLoaded", function() {
-    const ongoingBtn = document.getElementById("ongoingBtn");
-    const pastBtn = document.getElementById("pastBtn");
-    const cardContainer = document.getElementById("cardContainer");
-
-    ongoingBtn.addEventListener("click", function() {
+      ongoingBtn.addEventListener("click", function () {
         ongoingBtn.classList.add("active");
         pastBtn.classList.remove("active");
-        showCard();
-    });
+        showCard(ongoingCardContainer);
+        hideCard(pastCardContainer);
+      });
 
-    pastBtn.addEventListener("click", function() {
+      pastBtn.addEventListener("click", function () {
         pastBtn.classList.add("active");
         ongoingBtn.classList.remove("active");
-        showCard();
-    });
+        showCard(pastCardContainer);
+        hideCard(ongoingCardContainer);
+      });
 
-    function showCard() {
-        cardContainer.style.display = 'block';
+      function showCard(cardContainer) {
+        cardContainer.style.display = "flex";
         cardContainer.classList.add("fade-in");
-    }
-});
+      }
 
-
-</script>
-
+      function hideCard(cardContainer) {
+        cardContainer.style.display = "none";
+        cardContainer.classList.remove("fade-in");
+      }
+    });
+  </script>
 </html>

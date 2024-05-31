@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 :root {
---text: #000000;
---light: #f2f2f2;
---main: #5c376d;
---second: #cda3dc;
---accent: #8e209f;
+  --text: #000000;
+  --light: #f2f2f2;
+  --main: #5c376d;
+  --second: #cda3dc;
+  --accent: #8e209f;
 }
 * {
   padding: 0;
@@ -25,72 +25,80 @@ body {
   align-items: center;
   overflow: hidden;
   width: 100%;
-  background: rgb(92,55,109);
-  background: linear-gradient(132deg, rgba(92,55,109,1) 29%, rgba(255,255,255,1) 29%);
+  overflow: visible;
+  background: rgb(92, 55, 109);
+  background: linear-gradient(
+    132deg,
+    rgba(92, 55, 109, 1) 29%,
+    rgba(255, 255, 255, 1) 29%
+  );
   box-shadow: 0 0px 15px rgba(0, 0, 0, 0.45);
 }
-.company-name{
+.company-name {
   color: white !important;
 }
-nav .head {
+.account {
   display: flex;
   align-items: center;
 }
-
-
-/* #nav .logo img {
-  width: 80px;
-  height: auto;
-  border-radius: 50%;
-  margin-right: 10px;
+.account {
+  position: relative;
+  display: inline-block;
 }
-
-#nav .heading {
-  margin: 0;
-  font-size: 30px;
-}
-
-#nav .nav-links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 30%;
-  margin-left: 400px;
-}
-
-#nav .nav-links li {
-  font-weight: bold;
-  margin-left: auto;
-}
-
-#nav .nav-links a {
-  text-decoration: none;
-  font-size: 17px;
-  color: black;
-  transition: all 0.3s ease;
-
-}
-
-#nav .nav-links a:hover {
-  color: #2340ff;
-}
-
-#nav .nav-links a:focus {
-  color: #2340ff;
-}
-
-#nav .profile-img {
+.account img {
   width: 60px;
-  border-radius: 50%;
+  height: 60px;
   cursor: pointer;
-  transition: all 0.3s ease;
-} */
+}
+.account a:hover {
+  filter: none !important;
+}
 
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
+}
 
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.account:hover .dropdown {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.account:hover .dropdown {
+  display: block;
+  animation: fadeIn 0.3s forwards;
+}
 
 /* HOME */
-.home{
+.home {
   display: flex;
   /* align-items: center; */
   /* justify-content: flex-start; */
@@ -99,13 +107,14 @@ nav .head {
   overflow: hidden;
   background: url(/img/) no-repeat center center/cover;
 }
-.sub-wrapper{
+.sub-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-height: max-content;
+  height: max-content;
+  margin: 1em 0;
 }
 
 /* .search-container {
@@ -191,19 +200,17 @@ height: max-content;
   transform: translateY(-3px);
 }
 
-
 @keyframes shine {
   0% {
-      background-position: 200% center;
+    background-position: 200% center;
   }
   100% {
-      background-position: -200% center;
+    background-position: -200% center;
   }
 }
 
-
 /* SUB HOME */
-.sub-home{
+.sub-home {
   display: flex;
   /* align-items: center; */
   justify-content: center;
@@ -214,44 +221,46 @@ height: max-content;
   margin: 1em 5em 5em 5em;
   padding: 3em;
   border-radius: 2em;
-background: #ffffff;
-box-shadow:  11px 11px 22px #bababa,
-             -11px -11px 22px #ffffff;
-  background: linear-gradient(71deg, rgba(255,255,255,1) 70%, rgba(92,55,109,1) 70%);
+  background: #ffffff;
+  box-shadow: 11px 11px 22px #bababa, -11px -11px 22px #ffffff;
+  background: linear-gradient(
+    71deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(92, 55, 109, 1) 70%
+  );
   border: 1px solid var(--main);
 }
 
-.sub-home h1{
+.sub-home h1 {
   font-size: 2em;
   font-weight: 700;
   color: var(--main);
   margin-bottom: 1em;
 }
-.sub-home p{
+.sub-home p {
   font-size: 1.2em;
   color: gray;
   margin-bottom: 1em;
 }
 
-.event-error{
+.event-error {
   display: flex;
   width: 60%;
   flex-direction: column;
   gap: 1em;
   margin: 2em 0;
-  p{
+  p {
     font-size: 1.2em;
     font-weight: bold;
   }
-  a{
+  a {
     font-size: 1.2em;
     color: var(--accent);
     text-decoration: none;
   }
 }
 
-
-.myevent{
+.myevent {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -287,8 +296,9 @@ box-shadow:  11px 11px 22px #bababa,
 }
 .myeventcard-address {
   font-size: 1em;
-  color: #666;
+  color: #666 !important;
   margin: 0 0 20px 0;
+  text-align: left !important;
 }
 .myeventcard-button {
   display: inline-block;
@@ -303,12 +313,9 @@ box-shadow:  11px 11px 22px #bababa,
   transform: translateY(-3px);
 }
 
-
-
-
 /* MORE EVENTS */
-.more-events{
-  padding: 2em;
+.more-events {
+  padding: 2em 4em;
 }
 .event-nav {
   display: flex;
@@ -343,33 +350,37 @@ box-shadow:  11px 11px 22px #bababa,
   background-color: #ddd;
 }
 
-
 .card-container {
   display: none;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
+  gap: 3em;
 }
 
 .card-container.fade-in {
   display: block;
-  animation: fadeInUp 0.5s ease-in-out;
+  animation: fadeInUp 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeInUp {
   from {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 .otherevent {
-  width: 300px;
+  width: 30%;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.272);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -413,21 +424,6 @@ box-shadow:  11px 11px 22px #bababa,
   box-shadow: 0 8px 16px rgba(155, 89, 182, 0.3);
 }
 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
 /* Add your existing styles here */
 
 @keyframes fadeInFromBottom {
@@ -442,20 +438,19 @@ box-shadow:  11px 11px 22px #bababa,
   }
 }
 
-
-@media screen and (max-width: 480px) { /* Mobile */
+@media screen and (max-width: 480px) {
+  /* Mobile */
   .button-slider {
-      width: 100%;
-      max-width: 400px;
+    width: 100%;
+    max-width: 400px;
   }
 
   .slide-button {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .search-container {
     width: 100%;
     /* Ensure the search container takes full width */
@@ -478,5 +473,77 @@ box-shadow:  11px 11px 22px #bababa,
   .button-slider {
     width: 100%;
     max-width: 600px;
-}
+  }
+  #nav {
+    background: linear-gradient(
+      132deg,
+      rgba(92, 55, 109, 1) 40%,
+      rgba(255, 255, 255, 1) 40%
+    );
+  }
+  .greeting-container {
+    flex-direction: column;
+    margin: 2em;
+    gap: 1em;
+  }
+  .sub-home {
+    padding: 2em 1em;
+    margin: 1em;
+    width: 80%;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      342deg,
+      rgba(255, 255, 255, 1) 70%,
+      rgba(92, 55, 109, 1) 70%
+    );
+  }
+  .sub-home h1 {
+    color: rgb(235, 235, 235);
+    font-size: 2em;
+    text-align: center;
+  }
+  .sub-home p {
+    color: rgb(204, 204, 204);
+    font-size: 1em;
+    text-align: center;
+  }
+  .myeventcard {
+    width: 90%;
+  }
+  .myeventcard-title {
+    font-size: 1.2em;
+  }
+  .myeventcard-address {
+    font-size: 0.8em;
+  }
+  .myeventcard img {
+    height: 150px;
+  }
+  .more-events {
+    padding: 1em;
+    margin: 2em 0;
+  }
+  .more-events h1 {
+    text-align: center;
+  }
+  .event-nav {
+    justify-content: center;
+  }
+  .otherevent {
+    width: 90%;
+  }
+  .account {
+    display: block;
+  }
+  .account img{
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+  }
+  .account a{
+    padding: 0 !important;
+  }
+  .account .dropdown a{
+    padding: 10px 20px !important; 
+  }
 }
