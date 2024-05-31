@@ -31,7 +31,7 @@ footer {
     justify-content: center;
     flex-direction: column;
   }
-  .footer-box{
+  footer .footer-box{
     padding: 10px 10px 0px 10px ;
     width: 100%;
     height: 100%;
@@ -45,7 +45,7 @@ footer {
     margin-top: 20px;
     width: 100%;
   }
-  .mainbox1 .box{
+  footer .mainbox1 .box{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -54,30 +54,30 @@ footer {
     gap: 10px;
     margin-left: 40px;
   }
-  .mainbox1 .box:nth-child(1){
+  footer .mainbox1 .box:nth-child(1){
     width: 30%;
   }
-  .mainbox1 .box:nth-child(2){
+  footer .mainbox1 .box:nth-child(2){
     width: 20%;
   }
-  .mainbox1 .box:nth-child(3){
+  footer .mainbox1 .box:nth-child(3){
     width: 20%;
   }
-  .mainbox1 .box:nth-child(4){
+  footer .mainbox1 .box:nth-child(4){
     width: 30%;
   }
-  .box .head{
+  footer .box .head{
     font-size: 20px;
     font-weight: 700;
     text-align: left;
   }
-  .box .f-desc{
+  footer .box .f-desc{
     font-size: 15px;
     color: #333;
     text-align: justify;
     /* width: 70%; */
   }
-  .box .links{
+  footer .box .links{
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -85,48 +85,48 @@ footer {
     gap: 10px;
     margin-right: 50px;
   }
-  .links a{
+  footer .links a{
     text-decoration: none;
     color: #333;
     font-weight: 500;
     transition: all 0.3s ease;
   }
-  .links a:hover{
+  footer .links a:hover{
     color: var(--accent);
   }
-  .box .address{
+  footer .box .address{
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
   }
-  .address p i{
+  footer .address p i{
     margin-right: 5px;
     width: 15px;
   }
   
-  .box .n-desc{
+  footer .box .n-desc{
     font-size: 15px;
     color: #333;
     text-align: justify;
     width: 70%;
   }
-  .box .sub{
+  footer .box .sub{
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     gap: 10px;
   }
-  .sub input{
+  footer .sub input{
     border: none;
     outline: none;
     padding: 5px 0px 5px 5px;
     width: 200px;
     border-radius: 5px;
   }
-  .sub button{
+  footer .sub button{
     border: none;
     outline: none;
     padding: 5px 10px;
@@ -136,7 +136,7 @@ footer {
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  .sub button:hover{
+  footer .sub button:hover{
     filter: brightness(120%);
   }
   
@@ -150,66 +150,66 @@ footer {
     padding: 20px 0;
     width: 100%;
   }
-  .mainbox2 .head{
+  footer .mainbox2 .head{
     font-size: 20px;
     font-weight: 700;
   }
-  .mainbox2 .social{
+  footer .mainbox2 .social{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     gap: 50px;
   }
-  .social a{
+  footer .social a{
     text-decoration: none;
     font-size: 30px;
     transition: all 0.3s ease;
     color: #7a4a91;
   }
-  .social a:hover{
+  footer .social a:hover{
     color: var(--accent);
   }
   
-  .madeby{
+  footer .madeby{
     margin-top: 50px;
     font-size: 15px;
     color: #333;
     text-align: center;
     width: 100%;
   }
-  .madeby .copyright{
+  footer .madeby .copyright{
     color: #333;
     font-weight: 700;
     margin: 20px auto;
     font-size: 20px;
   }
-  .madeby .end{
+  footer .madeby .end{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em;
     /* background-color: #333; */
   }
-  .end a{
+  footer .end a{
     color: black;
     text-decoration: none;
     font-weight: 700;
     transition: all 0.3s ease;
   }
-  .privacypolicy a{
+  footer .privacypolicy a{
     font-size: 10px;
     margin: 5px 20px;
   }
 
   @media only screen and (max-width: 768px) {
-    .form-box .text{
+    footer .form-box .text{
         font-size: 30px;
       }
-      .form-box form{
+      footer .form-box form{
         padding: 10px 0 0 0;
       }
-      .form-box form .form-row{
+      footer .form-box form .form-row{
         display: block;
         flex-direction: column;
         margin-bottom: 0;
@@ -217,7 +217,7 @@ footer {
       form .form-row .input-data{
         margin: 35px 0!important;
       }
-      .submit-btn .input-data{
+      footer .submit-btn .input-data{
         width: 40%!important;
       }
       footer .mainbox1{
@@ -231,11 +231,11 @@ footer {
       footer .head{
         padding-left: 20px !important;
       }
-      .f-desc,.address,.n-desc,.links,.sub{
+      footer .f-desc,.address,.n-desc,.links,.sub{
         width: 90% !important;
         padding-left: 20px !important;
       }
-      .madeby .end{
+      footer .madeby .end{
         flex-direction: column;
       }
   }
