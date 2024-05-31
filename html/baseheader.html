@@ -48,13 +48,13 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 100%;
   }
   
-.nav-links {
+  .navbar .nav-links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.nav-links a {
+.navbar .nav-links a {
   color: black;
   text-decoration: none;
   margin: 0 15px;
@@ -62,13 +62,13 @@ input[type="number"]::-webkit-outer-spin-button {
   transition: all ease 0.3s;
   font-weight: 700;
 }
-.nav-links a:hover,
+.navbar .nav-links a:hover,
 .logo:hover {
   color: var(--primary);
   filter: brightness(150%);
   cursor: pointer;
 }
-  .company-name {
+.navbar .company-name {
     color: white;
     padding: 20px;
     font-size: clamp(25px, 4vw, 30px);
@@ -76,24 +76,24 @@ input[type="number"]::-webkit-outer-spin-button {
     padding-left: 100px;
     text-decoration: none;
   }
-  .account {
+  .navbar .account {
     display: flex;
     align-items: center;
   }
-  .account {
+  .navbar .account {
     position: relative;
     display: inline-block;
   }
-  .account img {
+  .navbar .account img {
     width: 60px;
     height: 60px;
     cursor: pointer;
   }
-  .account a:hover {
+  .navbar .account a:hover {
     filter: none !important;
   }
   
-  .dropdown {
+  .navbar .dropdown {
     display: none;
     position: absolute;
     top: 50px;
@@ -107,7 +107,7 @@ input[type="number"]::-webkit-outer-spin-button {
     z-index: 1000;
   }
   
-  .dropdown a {
+  .navbar .dropdown a {
     display: block;
     padding: 10px 20px;
     color: #333;
@@ -115,7 +115,7 @@ input[type="number"]::-webkit-outer-spin-button {
     transition: background-color 0.3s;
   }
   
-  .account:hover .dropdown {
+  .navbar .account:hover .dropdown {
     display: block;
     opacity: 1;
   }
@@ -131,7 +131,7 @@ input[type="number"]::-webkit-outer-spin-button {
     }
   }
   
-  .account:hover .dropdown {
+  .navbar .account:hover .dropdown {
     display: block;
     animation: fadeIn 0.3s forwards;
   }
@@ -140,24 +140,24 @@ input[type="number"]::-webkit-outer-spin-button {
     body {
         overflow-x: hidden !important;
       }
-      .nav-links .n-link {
+      .navbar .nav-links .n-link {
         display: none;
       }
-      .company-name {
+      .navbar .company-name {
         padding-left: 20px;
       }
-    .account {
+      .navbar .account {
         display: block;
       }
-      .account img{
+      .navbar .account img{
         width: 50px;
         height: 50px;
         margin-right: 0;
       }
-      .account a{
+      .navbar .account a{
         padding: 0 !important;
       }
-      .account .dropdown a{
+      .navbar .account .dropdown a{
         padding: 10px 20px !important; 
       }
 }
