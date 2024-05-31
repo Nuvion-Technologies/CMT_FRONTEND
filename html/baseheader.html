@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+:root {
+  --text: #000000;
+  --background: #f2f2f2;
+  --primary: #5c376d;
+  --secondary: #cda3dc;
+  --accent: #9c3179;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 10px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.navbar {
+    background: rgb(92, 55, 109); /* Merged gradient background */
+    background: linear-gradient(
+      132deg,
+      rgba(92, 55, 109, 1) 29%,
+      rgba(255, 255, 255, 1) 29%
+    );
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.45); /* Stronger box-shadow */
+    width: 100%;
+  }
+  
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 20px;
+  transition: all ease 0.3s;
+  font-weight: 700;
+}
+.nav-links a:hover,
+.logo:hover {
+  color: var(--primary);
+  filter: brightness(150%);
+  cursor: pointer;
+}
+  .company-name {
+    color: white;
+    padding: 20px;
+    font-size: clamp(25px, 4vw, 30px);
+    font-weight: 700;
+    padding-left: 100px;
+    text-decoration: none;
+  }
+  .account {
+    display: flex;
+    align-items: center;
+  }
+  .account {
+    position: relative;
+    display: inline-block;
+  }
+  .account img {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .account a:hover {
+    filter: none !important;
+  }
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .account:hover .dropdown {
+    display: block;
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .account:hover .dropdown {
+    display: block;
+    animation: fadeIn 0.3s forwards;
+  }
+
+@media only screen and (max-width:768px){
+    body {
+        overflow-x: hidden !important;
+      }
+      .nav-links .n-link {
+        display: none;
+      }
+      .company-name {
+        padding-left: 20px;
+      }
+    .account {
+        display: block;
+      }
+      .account img{
+        width: 50px;
+        height: 50px;
+        margin-right: 0;
+      }
+      .account a{
+        padding: 0 !important;
+      }
+      .account .dropdown a{
+        padding: 10px 20px !important; 
+      }
+}
+    </style>
+</head>
+<body>
+    <div class="navbar" id="nav">
+        <a class="company-name" href="/html/user_home.html">MOOX</a>
+        <div class="nav-links" id="navLinks">
+          <a class="n-link" href="#">HOME</a>
+          <a class="n-link" href="#about">ABOUT</a>
+          <a class="n-link" href="#contact">CONTACT</a>
+          <a class="n-link" href="#news">NEWS</a>
+  
+          <!-- LOGIN BUTTON -->
+          <!-- BELOW ACCOUNT CODE IS FOR WHEN THE USER LOGIN AND AFTER SHOW THIS LOGO WITH USER IMAGE -->
+  
+          <div class="account">
+            <a href="#"><img src="/img/account.png" alt="Account" /></a>
+            <div class="dropdown">
+              <a href="#" class="logout">Logout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
