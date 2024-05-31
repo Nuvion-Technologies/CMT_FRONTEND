@@ -70,7 +70,7 @@ input[type="number"]::-webkit-outer-spin-button {
     body {
       overflow-x: hidden !important;
     }
-    .nav-links a {
+    .nav-links .n-link {
       display: none;
     }
     .company-name {
