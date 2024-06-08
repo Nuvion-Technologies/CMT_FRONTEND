@@ -33,13 +33,79 @@
           </div>
         </div>
       </div>
-
+<div class="main-bg">
       <div class="path">
         <a href="/html/user_home.html">Home</a> > <a href="/html/createevent.html">Create Event</a>
       </div>
 
+      <div class="hero">
+        <div class="head-text">
+            <div class="heading">
+                Create Conference
+            </div>
+            <div class="sub-head">
+                Create a conference with ease and get your work done in minutes.
+            </div>
+        </div>
+        <div class="rules">
+            <ol type="1">
+                <li>Make sure to fill in correct details.</li>
+                <li>Once the conference is created it can not be changed.</li>
+                <li>Create a alias name for your conference for easy searching.</li>
+                <li>Upload the Excel file containt name and email of the invigilator.</li>
+                <li>You can download sample excel sheet from <a href="#">here.</a></li>
+            </ol>
+        </div>
+      </div>
+
+      <!-- FORM START -->
 
 
+      <div class="container">
+        <form id="eventForm" novalidate>
+          <div class="form-group">
+            <label for="eventName">Event Name</label>
+            <input type="text" id="eventName" name="eventName">
+            <div class="error-message">Event name is required.</div>
+          </div>
+    
+          <div class="form-group">
+            <label for="eventDescription">Description</label>
+            <textarea id="eventDescription" name="eventDescription"></textarea>
+            <div class="error-message">Description is required.</div>
+          </div>
+    
+          <div class="form-group">
+            <label for="eventDate">Event Date</label>
+            <input type="date" id="eventDate" name="eventDate">
+            <div class="error-message">Event date is required.</div>
+          </div>
+    
+          <div class="form-group">
+            <label for="submissionStartDate">Submission Start Date</label>
+            <input type="date" id="submissionStartDate" name="submissionStartDate">
+            <div class="error-message">Submission start date is required.</div>
+          </div>
+    
+          <div class="form-group">
+            <label for="submissionEndDate">Submission End Date</label>
+            <input type="date" id="submissionEndDate" name="submissionEndDate">
+            <div class="error-message">Submission end date is required.</div>
+          </div>
+    
+          <div class="form-group">
+            <label for="fileUpload">Excel File Upload</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".xlsx, .xls">
+            <div class="error-message">File upload is required.</div>
+          </div>
+    
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      </div>
+
+      
+        <!-- FORM END -->
 
 
     <footer>
@@ -112,4 +178,88 @@
         </div>
       </footer>
   </body>
+  <script>
+    document.getElementById('eventForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  let valid = true;
+
+  // Reset all error messages and borders
+  const errorMessages = document.querySelectorAll('.error-message');
+  errorMessages.forEach(error => error.style.display = 'none');
+  
+  const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+  inputs.forEach(input => input.classList.remove('error-border'));
+
+  // Simple validation
+  const eventName = document.getElementById('eventName');
+  const eventDescription = document.getElementById('eventDescription');
+  const eventDate = document.getElementById('eventDate');
+  const submissionStartDate = document.getElementById('submissionStartDate');
+  const submissionEndDate = document.getElementById('submissionEndDate');
+  const fileUpload = document.getElementById('fileUpload');
+
+  if (eventName.value.trim() === '') {
+    showError(eventName, 'Event name is required.');
+    valid = false;
+  }
+
+  if (eventDescription.value.trim() === '') {
+    showError(eventDescription, 'Description is required.');
+    valid = false;
+  }
+
+  if (eventDate.value === '') {
+    showError(eventDate, 'Event date is required.');
+    valid = false;
+  }
+
+  if (submissionStartDate.value === '') {
+    showError(submissionStartDate, 'Submission start date is required.');
+    valid = false;
+  }
+
+  if (submissionEndDate.value === '') {
+    showError(submissionEndDate, 'Submission end date is required.');
+    valid = false;
+  }
+
+  if (submissionStartDate.value && submissionEndDate.value && new Date(submissionStartDate.value) > new Date(submissionEndDate.value)) {
+    showError(submissionEndDate, 'Submission end date must be after the start date.');
+    valid = false;
+  }
+
+  if (!fileUpload.files.length) {
+    showError(fileUpload, 'File upload is required.');
+    valid = false;
+  }
+
+  if (valid) {
+    alert('Form submitted successfully!');
+  }
+});
+
+function showError(input, message) {
+  const formGroup = input.parentElement;
+  const errorMessage = formGroup.querySelector('.error-message');
+  errorMessage.textContent = message;
+  errorMessage.style.display = 'block';
+  input.classList.add('error-border');
+}
+
+// Disable default browser validation messages
+document.getElementById('eventForm').setAttribute('novalidate', true);
+
+// Remove error message on input
+const inputs = document.querySelectorAll('.form-group input, .form-group textarea');
+inputs.forEach(input => {
+  input.addEventListener('input', function() {
+    const formGroup = input.parentElement;
+    const errorMessage = formGroup.querySelector('.error-message');
+    errorMessage.style.display = 'none';
+    input.classList.remove('error-border');
+  });
+});
+
+  </script>
   </html>
