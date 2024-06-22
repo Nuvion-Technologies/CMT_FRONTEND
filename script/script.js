@@ -104,6 +104,6 @@ login.addEventListener("click", function() {
   setTimeout(function () {
       loader.style.opacity = '0';
           loader.style.display = 'none';
-          window.location.href = 'shivam_login.html';
+          window.location.href = 'login.html';
   }, 1200);
 });
