@@ -120,6 +120,6 @@ forgotPass.addEventListener("click", function() {
   setTimeout(function () {
       loader.style.opacity = '0';
           loader.style.display = 'none';
-          window.location.href = 'shivam_forgot_pass.html';
+          window.location.href = 'forgotpass.html';
   }, 1200);
 });

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/shivam_login.css" />
+    <link rel="stylesheet" href="/css/login.css" />
     <link rel="stylesheet" href="/css/navbar.css">
     <link
       rel="stylesheet"
@@ -50,13 +50,13 @@
             </div>
           </div>
           <div class="login-body">
-            <form action="/html/user_home.html" method="POST">
+            <form action="/html/hosthome.html" method="GET">
               <div class="input-group">
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  required
+
                   placeholder="Email / ID"
                 />
                 <span class="email-icon">
@@ -68,14 +68,18 @@
                   type="password"
                   id="password"
                   name="password"
-                  required
+
                   placeholder="Password"
                 />
                 <span class="eye-icon" onclick="tPVL()">
                   <i class="fas fa-eye"></i>
                 </span>
               </div>
-              <button type="submit">Log In</button>
+              <button type="submit" id="loginButton">Log In</button>
+
+    <script type="text/javascript">
+        document.getElementById("loginButton").addEventListener("click", redirectToHome);
+    </script>
             </form>
           </div>
           <div class="main-footer">
@@ -105,7 +109,7 @@
               <h1>Sign Up</h1>
             </div>
             <div class="signup-body">
-              <form action="/html/user_home.html" method="POST">
+              <form action="/html/hosthome.html" method="POST">
                 <div class="input-group">
                   <input
                     type="text"
